@@ -1,5 +1,7 @@
 # thesis-reference-tool
 
+[点击访问](https://wzkmaster.github.io/thesis-reference-tool/)
+
 > 自动帮你整理和排序参考文献的小工具
 
 ## 用法
