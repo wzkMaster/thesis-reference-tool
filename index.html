@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>参考文献排序工具</title>
+  <style>
+    /* 样式表 */
+    body {
+      background-color: #F8F8FF;
+    }
+
+    .container {
+      margin-top: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    textarea {
+      width: 600px;
+      height: 200px;
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      outline: none;
+      box-shadow: 1px 1px 3px #bbb;
+      resize: none;
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      outline: none;
+      background-color: #4169E1;
+      color: #FFF;
+      cursor: pointer;
+    }
+
+    .output {
+      margin-top: 20px;
+
+    }
+
+    .output p {
+      white-space: pre-wrap;
+      background-color: white;
+      width: 600px;
+      padding: 10px;
+      font-size: 90%;
+    }
+
+    .output label {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .output button {
+      margin-top: 10px;
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      outline: none;
+      background-color: #008000;
+      color: #FFF;
+      cursor: pointer;
+    }
+
+    .option {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      gap: 10px
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <!-- 输入区域 -->
+    <textarea id="ref-list" placeholder="请在这里输入您的参考文献列表"></textarea>
+    <div class="option">
+      <button onclick="sortReferences()">排序</button>
+      <div>
+        <input id="sort" type="checkbox"><label for="sort">是否根据作者笔画排序</label>
+      </div>
+    </div>
+
+    <!-- 输出区域 -->
+    <div class="output">
+      <label>排序后的参考文献列表：</label>
+      <button onclick="copyText()">一键复制</button>
+      <p id="ref-output"></p>
+    </div>
+  </div>
+
+  <!-- JS脚本 -->
+  <script src="./chinese-stroke.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
