@@ -27,20 +27,15 @@ function sortReferences() {
 
   const isSort = document.getElementById("sort").checked;
 
-  // 根据汉字笔画排序
+  // 根据作者字顺排序
   if (isSort) {
-    input.sort((a, b) => {
-      const regExp = /[\u4e00-\u9fa5]|[a-zA-Z]/;
-      const ac = a.match(regExp);
-      const bc = b.match(regExp);
-      if (ac && bc) {
-        return getStroke(ac[0]) - getStroke(bc[0]);
-      }
-      if (ac) {
-        return -1;
-      }
-      return 1;
-    });
+    input.sort((a, b) =>
+      a
+        .replace(/^\[\d+\]\s*/, "")
+        .localeCompare(b.replace(/^\[\d+\]\s*/, ""), "zh-Hans-CN", {
+          sensitivity: "accent",
+        })
+    );
   }
 
   // 去除原序号，添加正确的新序号
