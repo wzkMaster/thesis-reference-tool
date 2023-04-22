@@ -76,17 +76,25 @@
       justify-content: center;
       gap: 10px
     }
+
+    .detail {
+      position: absolute;
+      top: 10px;
+      right: 20%;
+      background-color: rgb(234, 109, 109);
+    }
   </style>
 </head>
 
 <body>
   <div class="container">
+    <button class="detail" onclick="openReadme()">使用说明</button>
     <!-- 输入区域 -->
     <textarea id="ref-list" placeholder="请在这里输入您的参考文献列表"></textarea>
     <div class="option">
       <button onclick="sortReferences()">排序</button>
       <div>
-        <input id="sort" type="checkbox"><label for="sort">是否根据作者笔画排序</label>
+        <input id="sort" type="checkbox"><label for="sort">根据作者笔画排序</label>
       </div>
     </div>
 

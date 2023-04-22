@@ -1,3 +1,10 @@
+function openReadme() {
+  window.open(
+    "https://github.com/wzkMaster/thesis-reference-tool/blob/main/README.md",
+    "_blank"
+  );
+}
+
 // 复制排序后的参考文献列表到剪贴板
 function copyText() {
   var refOutput = document.getElementById("ref-output");
