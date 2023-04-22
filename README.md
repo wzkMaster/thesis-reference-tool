@@ -24,7 +24,6 @@
 
 可以点击一键复制。
 
-2. 如果需要把参考文献按照作者笔顺排序，可以勾选，工具会再整理的同时顺便排序。会把中文的文献统一放前面，英文的放后面。
+2. 如果需要把参考文献按照作者笔顺排序，可以勾选，工具会在整理的同时顺便排序。会把中文的文献统一放前面，英文的放后面。
 
-<img width="665" alt="image" src="https://user-images.githubusercontent.com/56303938/233789569-80aa6c9b-8009-4878-b0b9-da4f9c28e35c.png">
-
+<img width="675" alt="WechatIMG422" src="https://user-images.githubusercontent.com/56303938/233797473-01339a08-6138-40b9-a713-d53d1723182f.png">
