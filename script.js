@@ -7,7 +7,7 @@ function openReadme() {
 
 // 复制排序后的参考文献列表到剪贴板
 function copyText() {
-  var refOutput = document.getElementById("ref-output");
+  const refOutput = document.getElementById("ref-output");
   // 复制文本到剪贴板
   navigator.clipboard.writeText(refOutput.textContent).then(
     function () {
@@ -20,13 +20,14 @@ function copyText() {
 }
 
 function sortReferences() {
-  var input = document
+  const input = document
     .getElementById("ref-list")
     .value.split("\n")
     .filter((item) => item);
 
-  var isSort = document.getElementById("sort").checked;
+  const isSort = document.getElementById("sort").checked;
 
+  // 根据汉字笔画排序
   if (isSort) {
     input.sort((a, b) => {
       const regExp = /[\u4e00-\u9fa5]|[a-zA-Z]/;
@@ -42,14 +43,14 @@ function sortReferences() {
     });
   }
 
-  var r = input.map((item, index) => {
+  // 去除原序号，添加正确的新序号
+  const r = input.map((item, index) => {
     if (item) {
       return `[${index + 1}] ${item.trim().replace(/^\[\d+\]\s*/, "")}`;
     }
   });
 
-  console.log(r);
-
-  var refOutput = document.getElementById("ref-output");
+  // 输出到页面
+  const refOutput = document.getElementById("ref-output");
   refOutput.textContent = r.join("\n");
 }
