@@ -2,7 +2,7 @@
 
 [点击访问](https://wzkmaster.github.io/thesis-reference-tool/)
 
-> 自动帮你整理和排序参考文献的小工具
+> 自动帮你整理和排序参考文献的小工具，如果有帮助的话欢迎star哟～
 
 ## 功能简介
 
